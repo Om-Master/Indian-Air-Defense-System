@@ -30,21 +30,23 @@
             height: 90px;
             width: 100%;
             background: linear-gradient(to right, #309C6F, #2A6D3E);
-            box-shadow: 0px 10px 8px #13630B;
+            box-shadow: 0px 6px 10px #13630B;
             padding: 0 5%;
             position: fixed;
             z-index: 5;
+            animation: slidenav 0.5s ease-in-out;
         }
 
         header p {
             display: flex;
             align-items: center;
-            color: #0D0E4A;
+            color: #3436ae;
             font-family: pridi;
             font-size: 48px;
             font-weight: bold;
             letter-spacing: 3px;
             height: 100%;
+            text-shadow: 2px 2px 5px #1B2455;
         }
 
         header p img {
@@ -68,6 +70,17 @@
         nav ul li a {
             text-decoration: none;
             color: #EAE5DE;
+        }
+
+        @keyframes slidenav {
+            from{
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0px);
+                opacity: 1;
+            }
         }
 
         main {
@@ -97,19 +110,97 @@
             padding-top: 90px;
         }
 
+        main section{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        } 
+
         section .guardian{
             color: #EAE5DE;
             font-family: 'roboto', sans-serif;
             font-size: 48px;
             font-weight: bold;
             letter-spacing: 3px;
+            margin-top: 80px;
+            animation: slidein 0.7s ease-in-out;
         }
         section .iads{
-            color: #EAE5DE;
+            color: #3436ae;
             font-family: 'pridi';
-            font-size: 56px;
+            font-size: 80px;
             font-weight: bold;
             letter-spacing: 3px;
+            margin-top: 10px;
+            text-shadow: 5px 5px 10px #1B2455;
+            animation: slidein 0.5s ease-in-out;
+        }
+        section .explore{
+            color: #EAE5DE;
+            font-family: 'roboto', sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            width: 500px;
+            margin-top: 5px;
+            animation: slidein 0.7s ease-in-out;
+        }
+
+        @keyframes slidein {
+            from{
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        section button{
+            width: 270px;
+            height: 70px;
+            background: linear-gradient(to right, #309C6F, #2A6D3E);
+            color: #EAE5DE;
+            font-family: 'roboto', sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-top: 30px;
+            border-radius: 16px;
+            outline: none;
+            border: none;
+            box-shadow: 3px 3px 10px #0C510D;
+            cursor: pointer;
+            animation: slidein 0.5s ease-in-out;
+        }
+        section button:active{
+            background: linear-gradient(to right, #337f4a, #296049);
+        }
+        section .rafale{
+            position: absolute;
+            top: 50px;
+            left: -480px;
+            transform: scale(0.5);
+            z-index: 1;
+            filter: contrast(2) brightness(1.2) drop-shadow(4px 4px 20px #000000);
+            animation: slidejet 0.5s ease-in-out;
+        }
+
+        @keyframes slidejet {
+            from{
+                transform: translate(-40px,40px) scale(0.5);
+                opacity: 0;
+            }
+            to{
+                transform: translate(0px,0px) scale(0.5);
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -131,15 +222,18 @@
         </nav>
     </header>
     <main>
+        <img class="radar" src="asset/radar1.png" alt="">
         <section>
-            <img class="radar" src="asset/radar1.png" alt="">
             <h1 class="guardian">Guardians Of The Skies:</h1>
-            <h1 class="iads">Indian Air Defense System</h1>
+            <h1 class="iads">INDIAN AIR DEFENSE SYSTEM</h1>
             <p class="explore">Explore the technology, strength, and evolution of India's aerial shield</p>
             <button>Explore Now</button>
-            <img src="asset/Rafale.png" alt="">
+            <img class="rafale" src="asset/Rafale.png" alt="">
         </section>
     </main>
+    <footer>
+        <p>© 2025 Indian Air Defense System. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
