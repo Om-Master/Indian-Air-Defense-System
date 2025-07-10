@@ -36,7 +36,7 @@
             padding: 0 5%;
             position: fixed;
             z-index: 5;
-            animation: slidenav 0.5s ease-in-out;
+            animation: slidenav 1s ease-in-out;
         }
 
         header p {
@@ -76,7 +76,7 @@
 
         @keyframes slidenav {
             from {
-                transform: translateY(-30px);
+                transform: translateY(-50px);
                 opacity: 0;
             }
 
@@ -129,7 +129,7 @@
             font-weight: bold;
             letter-spacing: 3px;
             margin-top: 80px;
-            animation: slidein 0.7s ease-in-out;
+            animation: slidein 1.5s ease-in-out;
         }
 
         section .iads {
@@ -141,7 +141,7 @@
             letter-spacing: 3px;
             margin-top: 10px;
             text-shadow: 5px 5px 10px #1B2455;
-            animation: slidein 0.5s ease-in-out;
+            animation: slidein 1s ease-in-out;
         }
 
         section .explore {
@@ -152,12 +152,12 @@
             letter-spacing: 0.5px;
             width: 500px;
             margin-top: 5px;
-            animation: slidein 0.7s ease-in-out;
+            animation: slidein 1.5s ease-in-out;
         }
 
         @keyframes slidein {
             from {
-                transform: translateY(20px);
+                transform: translateY(35px);
                 opacity: 0;
             }
 
@@ -182,11 +182,16 @@
             border: none;
             box-shadow: 3px 3px 10px #0C510D;
             cursor: pointer;
-            animation: slidein 0.5s ease-in-out;
+            animation: slidein 1s ease-in-out;
         }
 
         section button:active {
             background: linear-gradient(to right, #337f4a, #296049);
+        }
+
+        section button a {
+            text-decoration: none;
+            color: #EAE5DE;
         }
 
         section .rafale {
@@ -195,12 +200,12 @@
             left: -500px;
             transform: scale(0.5);
             filter: contrast(2) brightness(1.2) drop-shadow(4px 4px 20px #000000);
-            animation: slidejet 0.5s ease-in-out;
+            animation: slidejet 1s ease-in-out;
         }
 
         @keyframes slidejet {
             from {
-                transform: translate(-40px, 40px) scale(0.5);
+                transform: translate(-70px, 70px) scale(0.5);
                 opacity: 0;
             }
 
@@ -224,15 +229,6 @@
             background-blend-mode: multiply;
         }
 
-        section.overview>img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 700px;
-            object-fit: cover;
-        }
-
         section.overview .overview-content {
             width: 1000px;
             height: 500px;
@@ -240,12 +236,19 @@
             box-shadow: 10px 10px 10px #000000;
             padding: 0px 80px;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            align-items: center;
             background: rgba(87, 87, 87, 0.3);
             backdrop-filter: blur(10px);
         }
 
+        .overview-text {
+            width: 500px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
         section.overview h1 {
             font-family: 'pridi';
             color: #2fa86c;
@@ -261,9 +264,43 @@
             font-size: 20px;
             font-weight: bold;
             letter-spacing: 0.5px;
-            width: 500px;
             margin-top: 5px;
             animation: slidein 0.7s ease-in-out;
+        }
+
+        img.overview-iadf-cycle {
+            height: 320px;
+        }
+
+
+
+
+        .site-footer {
+            background-color: #1A2E45;
+            /* Dark blue tone */
+            color: #EAE5DE;
+            padding: 20px 0;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 28px;
+            border-top: 2px solid #309C6F;
+            /* Accent stripe */
+        }
+
+        .footer-content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 80px;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+        }
+
+        .footer-content strong {
+            color: #309C6F;
+            /* Optional: highlight name or site */
         }
     </style>
 </head>
@@ -285,30 +322,36 @@
         </nav>
     </header>
     <main>
-        <img class="radar" src="asset/radar1.png" alt="">
+        <img class="radar" src="asset/radar.png" alt="">
         <section>
             <h1 class="guardian">Guardians Of The Skies:</h1>
             <h1 class="iads">INDIAN AIR DEFENSE SYSTEM</h1>
             <p class="explore">Explore the technology, strength, and evolution of India's aerial shield</p>
-            <button>Explore Now</button>
+            <button><a href="#overview">Explore Now</a></button>
             <img class="rafale" src="asset/Rafale.png" alt="">
         </section>
     </main>
     <section class="overview">
-        <!-- <img src="asset/overview-bg.jpg" alt=""> -->
-        <div class="overview-content">
-            <h1>Overview:</h1>
-            <p>An air defense system is an integrated network of sensors, command centers, and weapons designed to
-                identify, track, intercept, and neutralize hostile airborne threats before they can reach critical
-                assets. Key components include ground-based radars for long-range detection, airborne surveillance
-                platforms such as AWACS, command and control centers that fuse sensor data and make real-time decisions,
-                and interceptor weapons ranging from man-portable air defense systems (MANPADS) to long-range
-                surface-to-air missiles</p>
+        <div class="overview-content" id="overview">
+            <div class="overview-text">
+                <h1>Overview:</h1>
+                <p>An air defense system is an integrated network of sensors, command centers, and weapons designed to
+                    identify, track, intercept, and neutralize hostile airborne threats before they can reach critical
+                    assets. Key components include ground-based radars for long-range detection, airborne surveillance
+                    platforms such as AWACS, command and control centers that fuse sensor data and make real-time decisions,
+                    and interceptor weapons ranging from man-portable air defense systems (MANPADS) to long-range
+                    surface-to-air missiles</p>
+            </div>
+                <img class="overview-iadf-cycle" src="asset/overview-iadf-cycle.png" alt="overview-iadf-cycle">
         </div>
     </section>
-    <footer>
-        <p>© 2025 Indian Air Defense System. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>© 2025 <strong>Indian Air Defense System</strong>. All rights reserved.</p>
+            <p>Designed by <strong>Om Gupta</strong></p>
+        </div>
     </footer>
+
 </body>
 
 </html>
