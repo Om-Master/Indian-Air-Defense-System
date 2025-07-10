@@ -10,6 +10,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pridi:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -73,11 +75,12 @@
         }
 
         @keyframes slidenav {
-            from{
+            from {
                 transform: translateY(-30px);
                 opacity: 0;
             }
-            to{
+
+            to {
                 transform: translateY(0px);
                 opacity: 1;
             }
@@ -85,32 +88,30 @@
 
         main {
             width: 100%;
-            height: calc(100vh + 100px);
-            background: 
-            radial-gradient(circle, rgba(255, 255, 255, 1), rgba(0, 0, 0,1)),
-            linear-gradient(to bottom, rgba(97, 125, 145, 1), rgba(149, 176, 204,1)),
-            linear-gradient(to bottom, rgba(255,255,255,1), rgba(0,0,0,1));
+            height: 820px;
+            background:
+                radial-gradient(circle, rgba(255, 255, 255, 1), rgba(0, 0, 0, 1)),
+                linear-gradient(to bottom, rgba(97, 125, 145, 1), rgba(149, 176, 204, 1)),
+                linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(0, 0, 0, 1));
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            background-blend-mode:multiply;
+            background-blend-mode: multiply;
+            padding-top: 90px;
         }
-        main .radar{
+
+        main .radar {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: calc(100vh + 100px);
+            height: 820px;
             object-fit: cover;
             opacity: 0.4;
             filter: contrast(2) saturate(0) brightness(0.7);
         }
 
-        main{
-            padding-top: 90px;
-        }
-
-        main section{
+        main section {
             width: 100%;
             height: 100%;
             text-align: center;
@@ -119,9 +120,9 @@
             flex-direction: column;
             align-items: center;
             overflow: hidden;
-        } 
+        }
 
-        section .guardian{
+        section .guardian {
             color: #EAE5DE;
             font-family: 'roboto', sans-serif;
             font-size: 48px;
@@ -130,7 +131,9 @@
             margin-top: 80px;
             animation: slidein 0.7s ease-in-out;
         }
-        section .iads{
+
+        section .iads {
+            width: 120%;
             color: #3436ae;
             font-family: 'pridi';
             font-size: 80px;
@@ -140,7 +143,8 @@
             text-shadow: 5px 5px 10px #1B2455;
             animation: slidein 0.5s ease-in-out;
         }
-        section .explore{
+
+        section .explore {
             color: #EAE5DE;
             font-family: 'roboto', sans-serif;
             font-size: 24px;
@@ -152,19 +156,20 @@
         }
 
         @keyframes slidein {
-            from{
+            from {
                 transform: translateY(20px);
                 opacity: 0;
             }
-            to{
+
+            to {
                 transform: translateY(0px);
                 opacity: 1;
             }
         }
 
-        section button{
+        section button {
             width: 270px;
-            height: 70px;
+            padding: 20px 0px;
             background: linear-gradient(to right, #309C6F, #2A6D3E);
             color: #EAE5DE;
             font-family: 'roboto', sans-serif;
@@ -179,28 +184,86 @@
             cursor: pointer;
             animation: slidein 0.5s ease-in-out;
         }
-        section button:active{
+
+        section button:active {
             background: linear-gradient(to right, #337f4a, #296049);
         }
-        section .rafale{
-            position: absolute;
-            top: 50px;
-            left: -480px;
+
+        section .rafale {
+            position: relative;
+            top: -430px;
+            left: -500px;
             transform: scale(0.5);
-            z-index: 1;
             filter: contrast(2) brightness(1.2) drop-shadow(4px 4px 20px #000000);
             animation: slidejet 0.5s ease-in-out;
         }
 
         @keyframes slidejet {
-            from{
-                transform: translate(-40px,40px) scale(0.5);
+            from {
+                transform: translate(-40px, 40px) scale(0.5);
                 opacity: 0;
             }
-            to{
-                transform: translate(0px,0px) scale(0.5);
+
+            to {
+                transform: translate(0px, 0px) scale(0.5);
                 opacity: 1;
             }
+        }
+
+        section.overview {
+            width: 100%;
+            height: 700px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background:
+                linear-gradient(-45deg, rgb(0, 110, 255, 0.7), rgba(134, 195, 228, 0.7)),
+                linear-gradient(to bottom, rgb(0, 0, 0), rgba(255, 255, 255, 0.5) 96%, rgb(114, 114, 114));
+            background-blend-mode: multiply;
+        }
+
+        section.overview>img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+        }
+
+        section.overview .overview-content {
+            width: 1000px;
+            height: 500px;
+            border-radius: 16px;
+            box-shadow: 10px 10px 10px #000000;
+            padding: 0px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: rgba(87, 87, 87, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        section.overview h1 {
+            font-family: 'pridi';
+            color: #2fa86c;
+            font-size: 60px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            animation: slidein 0.7s ease-in-out;
+        }
+
+        section.overview p {
+            font-family: 'akatab';
+            color: #EAE5DE;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            width: 500px;
+            margin-top: 5px;
+            animation: slidein 0.7s ease-in-out;
         }
     </style>
 </head>
@@ -231,6 +294,18 @@
             <img class="rafale" src="asset/Rafale.png" alt="">
         </section>
     </main>
+    <section class="overview">
+        <!-- <img src="asset/overview-bg.jpg" alt=""> -->
+        <div class="overview-content">
+            <h1>Overview:</h1>
+            <p>An air defense system is an integrated network of sensors, command centers, and weapons designed to
+                identify, track, intercept, and neutralize hostile airborne threats before they can reach critical
+                assets. Key components include ground-based radars for long-range detection, airborne surveillance
+                platforms such as AWACS, command and control centers that fuse sensor data and make real-time decisions,
+                and interceptor weapons ranging from man-portable air defense systems (MANPADS) to long-range
+                surface-to-air missiles</p>
+        </div>
+    </section>
     <footer>
         <p>© 2025 Indian Air Defense System. All rights reserved.</p>
     </footer>
