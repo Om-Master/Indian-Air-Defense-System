@@ -97,7 +97,7 @@
             background:
                 radial-gradient(circle, rgba(255, 255, 255, 1), rgba(0, 0, 0, 1)),
                 linear-gradient(to bottom, rgba(97, 125, 145, 1), rgba(149, 176, 204, 1)),
-                linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(0, 0, 0, 1));
+                linear-gradient(to bottom, rgba(255, 255, 255, 1) 70%, rgba(0, 0, 0, 1));
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -219,6 +219,13 @@
             }
         }
 
+        section h1 {
+            font-family: 'pridi';
+            color: #2fa86c;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
         section.overview {
             width: 100%;
             height: 700px;
@@ -228,8 +235,8 @@
             align-items: center;
             overflow: hidden;
             background:
-                linear-gradient(-45deg, rgb(0, 110, 255, 0.7), rgba(134, 195, 228, 0.7)),
-                linear-gradient(to bottom, rgb(0, 0, 0), rgba(255, 255, 255, 0.5) 70%, rgb(0, 0, 0));
+                linear-gradient(-45deg, rgba(0, 110, 255, 0.9), rgba(30, 26, 152, 0.9), rgba(20, 20, 20)),
+                linear-gradient(to bottom, rgb(0, 0, 0), rgba(255, 255, 255, 0.5), rgba(128, 128, 128, 0.25), rgb(20, 20, 20) 98%);
             background-blend-mode: multiply;
         }
 
@@ -254,12 +261,7 @@
         }
 
         section.overview h1 {
-            font-family: 'pridi';
-            color: #2fa86c;
             font-size: 60px;
-            font-weight: bold;
-            letter-spacing: 3px;
-            animation: slidein 0.7s ease-in-out;
         }
 
         section.overview p {
@@ -269,9 +271,8 @@
             font-weight: bold;
             letter-spacing: 0.5px;
             margin-top: 5px;
-            animation: slidein 0.7s ease-in-out;
         }
-
+        
         img.overview-iadf-cycle {
             height: 320px;
         }
@@ -279,8 +280,8 @@
         section.importance {
             width: 100%;
             min-height: 700px;
-            background: linear-gradient(to right, #444444, #242424),
-                linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.1) 98%);
+            background: linear-gradient(to right, #444444, #3f3f3f),
+                linear-gradient(to bottom, rgba(20, 20, 20, 1), rgba(255, 255, 255, 0.2), rgba(40, 40, 40, 1) 98%);
             background-blend-mode: multiply;
             display: flex;
             flex-direction: column;
@@ -299,11 +300,7 @@
         }
 
         .importance-content h1 {
-            font-family: 'pridi';
-            color: #2fa86c;
-            font-size: 48px;
-            font-weight: bold;
-            letter-spacing: 3px;
+            font-size: 60px;
         }
 
         .importance-content p {
@@ -324,6 +321,7 @@
             font-family: 'roboto', sans-serif;
             font-size: 24px;
             color: #EAE5DE;
+            margin-bottom: 20px;
         }
 
         .importance-list ul li {
@@ -350,12 +348,145 @@
             margin: 40px 0 auto 0;
         }
 
-        .importance img{
+        .importance img {
             width: 400px;
             position: absolute;
             top: 0;
             left: calc(50vw - 650px);
             object-fit: cover;
+            filter: contrast(2) brightness(1.2) drop-shadow(4px 4px 20px #dcdcdc);
+        }
+
+        section.timeline {
+            width: 100%;
+            height: 950px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            background:
+                linear-gradient(-45deg, rgba(0, 110, 255, 0.8), rgba(30, 26, 152, 0.8)),
+                linear-gradient(to bottom, rgb(20, 20, 20), rgba(255, 255, 255, 0.5) 80%);
+            background-blend-mode: multiply;
+            padding-top: 40px;
+        }
+
+        .timeline .timehead {
+            font-size: 72px;
+            text-align: center;
+        }
+
+        .mainline,
+        .mainline2,
+        .adjoining {
+            width: 900px;
+            height: 5px;
+            background-color: #D9D9D9;
+            position: absolute;
+        }
+
+        .adjoining {
+            width: 5px;
+            height: 250px;
+        }
+
+        .mainline,
+        .mailine2,
+        .adjoining,
+        .timeline-list li,
+        .timeline-list li div,
+        .timeline-list li h1{
+            position: absolute;
+        }  
+
+        .timeline-list li{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            top: 150px;
+        }
+
+        .timeline-list li .text {
+            width: 260px;
+            height: 170px;
+            border-radius: 24px;
+            padding: 20px;
+            font-family: 'akatab';
+            font-weight: 600;
+            color: #191919;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(230, 230, 230);
+            box-shadow: 5px 5px 10px #292929;
+            top: 20px;
+        }
+
+        .timeline-list li:nth-child(odd) .text {
+            opacity: 0.7;
+            color: black;
+        }
+        .timeline-list li:nth-child(n + 4) .text {
+            top: 310px;
+        }
+
+        li div.line {
+            width: 50px;
+            height: 50px;
+            background-color: #D9D9D9;
+            border-radius: 50%;
+            top: 225px;
+        }
+        li div.line::before {
+            content: '';
+            width: 5px;
+            height: 80px;
+            position: absolute;
+            left: calc(50% - 2.5px);
+            top: calc(-50% + 10px);
+            background-color: #D9D9D9;
+        }
+
+        .timeline-list li h1{
+            top: 300px;
+            font-size: 35px;
+        }
+        .timeline-list li:nth-child(n + 4) h1 {
+            top: 150px;
+        }
+
+
+        .mainline {
+            top: 400px;
+        }
+        .mainline2 {
+            top: 645px;
+        }
+        .adjoining {
+            left: calc(50% + 450px);
+            top: 400px;
+        }
+        .timeline-list li:nth-child(n + 4){
+            top: calc(400px - 2.5px);
+        }
+        .timeline-list li:nth-child(1) {
+            left: calc(50% + 300px - 900px);
+        }
+        .timeline-list li:nth-child(2) {
+            left: calc(50% + 300px - 525px);
+        }
+        .timeline-list li:nth-child(3) {
+            left: calc(50% + 300px - 150px);
+        }
+        .timeline-list li:nth-child(4) {
+            left: calc(50% + 300px - 150px);
+        }
+        .timeline-list li:nth-child(5) {
+            left: calc(50% + 300px - 525px);
+        }
+        .timeline-list li:nth-child(6) {
+            left: calc(50% + 300px - 900px);
         }
 
 
@@ -386,6 +517,7 @@
             color: #309C6F;
             /* Optional: highlight name or site */
         }
+
     </style>
 </head>
 
@@ -460,6 +592,69 @@
             </ul>
 
         </div>
+    </section>
+
+    <section class="timeline">
+        <div class="timeline-content">
+            <h1 class="timehead">Historical Evolution</h1>
+
+            <ul class="timeline-list">
+                <li>
+                    <div class="text">
+                        <p>India's earliest air defense relied on Soviet-supplied systems like the SA-2 Guideline and
+                            SA-3
+                            Goa missiles, complemented by anti-aircraft artillery.
+                        </p>
+                    </div>
+                    <h1>1960s-1970s</h1>
+                    <div class="line1 line"></div>
+                </li>
+                <li>
+                    <div class="text">
+                        <p>Initiation of the Integrated Guided Missile Development Programme (IGMDP), leading to
+                            indigenous
+                            systems like Akash.</p>
+                    </div>
+                    <h1>1980s</h1>
+                    <div class="line2 line"></div>
+                </li>
+                <li>
+                    <div class="text">
+                        <p>Launch of the Ballistic Missile Defense (BMD) programme to develop layered defense against
+                            missile threats.</p>
+                    </div>
+                    <h1>1990s</h1>
+                    <div class="line3 line"></div>
+                </li>
+                <li>
+                    <div class="text">
+                        <p>Induction of modern systems including SPYDER and the Indo-Israeli Barak-8.</p>
+                    </div>
+                    <h1>2000s-2010s</h1>
+                    <div class="line4 line"></div>
+                </li>
+                <li>
+                    <div class="text">
+                        <p>Procurement and deployment of the Russian S-400 Triumf, enhancing long-range coverage.</p>
+                    </div>
+                    <h1>2018-2025</h1>
+                    <div class="line5 line"></div>
+                </li>
+                <li>
+                    <div class="text">
+                        <p>Operation Sindoor demonstrated integrated multi-layer defense against drone and missile
+                            attacks.
+                        </p>
+                    </div>
+                    <h1>May 2025</h1>
+                    <div class="line6 line"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="mainline"></div>
+        <div class="mainline2"></div>
+        <div class="adjoining"></div>
+
     </section>
 
     <footer class="site-footer">
