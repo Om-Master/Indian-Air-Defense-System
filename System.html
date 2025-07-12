@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pridi:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            width: 100%;
+            background: linear-gradient(to right, #309C6F, #2A6D3E);
+            box-shadow: 0px 6px 10px #13630B;
+            padding: 0 5%;
+            position: fixed;
+            z-index: 5;
+            animation: slidenav 0.4s ease-in-out;
+        }
+
+        header p {
+            display: flex;
+            align-items: center;
+            color: #3436ae;
+            font-family: pridi;
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            height: 100%;
+            text-shadow: 2px 2px 5px #1B2455;
+        }
+
+        header p img {
+            margin-right: 10px;
+            height: 70%;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 40px;
+            font-family: inter;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        nav ul li {
+            cursor: pointer;
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #EAE5DE;
+        }
+
+        @keyframes slidenav {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        
+
+        main {
+            width: 100%;
+            height: 4600px;
+            background: linear-gradient(to bottom, rgba(117, 197, 255, 0.8), rgba(28, 4, 126, 0.8), rgba(117, 197, 255, 0.8), rgba(28, 4, 126, 0.8), rgba(117, 197, 255, 0.8), rgba(28, 4, 126, 0.8)),
+             rgb(0,0,0,0.4);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-blend-mode: multiply;
+            padding-top: 90px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        main h1 {
+            width: 100%;
+            color: #0D0E4A;
+            font-family: 'pridi';
+            font-size: 80px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-top: 10px;
+            text-shadow: 5px 5px 10px #424242;
+            animation: slidein 1s ease-in-out;
+            text-align: center;
+        }
+
+        section {
+            width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            margin-bottom: 500px;
+        }
+
+        section h2 {
+            font-family: 'pridi';
+            color: #00FF7E;
+            font-weight: bold;
+            letter-spacing: 3px;
+            font-size: 64px;
+            filter: drop-shadow(4px 4px 4px #0A4A0F);
+            text-align: left;
+            width: 1200px;
+            position: absolute;
+        }
+        section:nth-child(odd) h2{
+            text-align: right;
+            padding-right: 50px;
+        }
+
+        section ul li{
+            position: absolute;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 5px 5px 10px #202020;
+            font-family: 'roboto';
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 450;
+        }
+
+        section img{
+            filter: drop-shadow(15px 15px 20px rgb(33, 33, 33));
+            position: absolute;
+        }
+
+        section.akash h2{
+            top: 280px;
+        }
+        section.akash ul li:nth-child(1) {
+            top: 430px;
+            left: calc(50% + 200px);
+            width: 250px;
+            height: 130px;
+        }
+        section.akash ul li:nth-child(2) {
+            top: 575px;
+            left: calc(50% + 70px);
+            width: 380px;
+            height: 110px;
+        }
+        section.akash ul li:nth-child(3) {
+            top: 700px;
+            left: calc(50% + 130px);
+            width: 320px;
+            height: 150px;
+        }
+        section.akash ul li:nth-child(4) {
+            top: 720px;
+            left: calc(50% - 85px);
+            width: 200px;
+            height: 130px;
+        }
+        section.akash ul li:nth-child(5) {
+            top: 750px;
+            left: calc(50% - 380px);
+            width: 280px;
+            height: 100px;
+        }
+        section.akash img {
+            top: 330px;
+            left: calc(50% - 550px);
+            width: 680px;
+        }
+
+        section.barak h2 {
+            top: 970px;
+        }
+        section.barak ul li:nth-child(1) {
+            top: 1110px;
+            left: calc(50% - 500px);
+            width: 330px;
+            height: 120px;
+        }
+        section.barak ul li:nth-child(2) {
+            top: 1250px;
+            left: calc(50% - 500px);
+            width: 200px;
+            height: 160px;
+        }
+        section.barak ul li:nth-child(3) {
+            top: 1250px;
+            left: calc(50% - 280px);
+            width: 320px;
+            height: 140px;
+        }
+        section.barak ul li:nth-child(4) {
+            top: 1430px;
+            left: calc(50% - 500px);
+            width: 200px;
+            height: 170px;
+        }
+        section.barak ul li:nth-child(5) {
+            top: 1410px;
+            left: calc(50% - 280px);
+            width: 350px;
+            height: 150px;
+        }
+        section.barak img {
+            top: 1150px;
+            left: calc(50% - 200px);
+            width: 750px;
+        }
+
+
+        section.spyder h2 {
+            top: 1800px;
+        }
+        section.spyder ul li:nth-child(1) {
+            top: 2000px;
+            left: calc(50% - 270px);
+            width: 490px;
+            height: 130px;
+        }
+        section.spyder ul li:nth-child(2) {
+            top: 2000px;
+            left: calc(50% - 500px);
+            width: 200px;
+            height: 260px;
+        }
+        section.spyder ul li:nth-child(3) {
+            top: 2000px;
+            left: calc(50% + 260px);
+            width: 200px;
+            height: 260px;
+        }
+        section.spyder ul li:nth-child(4) {
+            top: 2290px;
+            left: calc(50% - 500px);
+            width: 200px;
+            height: 250px;
+        }
+        section.spyder ul li:nth-child(5) {
+            top: 2290px;
+            left: calc(50% + 260px);
+            width: 200px;
+            height: 250px;
+        }
+        section.spyder img {
+            top: 2100px;
+            left: calc(50% - 250px);
+            width: 480px;
+        }
+
+
+        section.triumf h2 {
+            top: 2650px;
+        }
+        section.triumf ul li:nth-child(1) {
+            top: 2830px;
+            left: calc(50% - 500px);
+            width: 640px;
+            height: 110px;
+        }
+        section.triumf ul li:nth-child(2) {
+            top: 2830px;
+            left: calc(50% + 160px);
+            width: 280px;
+            height: 160px;
+        }
+        section.triumf ul li:nth-child(3) {
+            top: 2970px;
+            left: calc(50% - 500px);
+            width: 510px;
+            height: 110px;
+        }
+        section.triumf ul li:nth-child(4) {
+            top: 3020px;
+            left: calc(50% + 40px);
+            width: 190px;
+            height: 300px;
+        }
+        section.triumf ul li:nth-child(5) {
+            top: 3060px;
+            left: calc(50% + 250px);
+            width: 190px;
+            height: 310px;
+        }
+        section.triumf img {
+            top: 3000px;
+            left: calc(50% - 500px);
+            width: 500px;
+        }
+
+
+        section.dome h2 {
+            top: 3550px;
+        }
+        section.dome ul li:nth-child(1) {
+            top: 3700px;
+            left: calc(50% - 570px);
+            width: 410px;
+            height: 180px;
+        }
+        section.dome ul li:nth-child(2) {
+            top: 3700px;
+            left: calc(50% + 120px);
+            width: 410px;
+            height: 180px;
+        }
+        section.dome ul li:nth-child(3) {
+            top: 4050px;
+            left: calc(50% - 500px);
+            width: 260px;
+            height: 330px;
+        }
+        section.dome ul li:nth-child(4) {
+            top: 4050px;
+            left: calc(50% + 220px);
+            width: 260px;
+            height: 330px;
+        }
+        section.dome img {
+            top: 3700px;
+            left: calc(50% - 420px);
+            width: 820px;
+        }
+
+
+        .site-footer {
+            background-color: #1A2E45;
+            /* Dark blue tone */
+            color: #EAE5DE;
+            padding: 20px 0;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 28px;
+            border-top: 2px solid #309C6F;
+            /* Accent stripe */
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 80px;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+        }
+
+        .footer-content strong {
+            color: #309C6F;
+            /* Optional: highlight name or site */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p>
+            <img src="asset/fighter-plane.png" alt="">
+            VAYU
+        </p>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./System.html">System</a></li>
+                <li><a href="./Radar.html">Radar</a></li>
+                <li><a href="./Strategy.html">Strategy</a></li>
+                <li><a href="./Future.html">Future</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>KEY SYSTEM DEFENSE</h1>
+
+        <section class="akash">
+            <h2>Akash Missile System</h2>
+            <ul>
+                <li>
+                    <p>The Akash is India’s first indigenously developed medium-range surface-to-air missile, developed
+                        by DRDO under IGMDP.</p>
+                </li>
+                <li>
+                    <p>It has a range of 25–30 km and can hit targets at altitudes up to 20 km.</p>
+                </li>
+                <li>
+                    <p>It uses the Rajendra phased-array radar for target tracking and guidance.</p>
+                </li>
+                <li>
+                    <p>Akash is mounted on wheeled or tracked platforms for rapid redeployment.</p>
+                </li>
+                <li>
+                    <p>Inducted by the IAF in 2014 and the Army in 2015, it has intercepted drones and cruise missiles
+                        in operations.</p>
+                </li>
+            </ul>
+            <img src="asset/akash-missile.png" alt="">
+        </section>
+
+        <section class="barak">
+            <h2>Barak - 8</h2>
+            <ul>
+                <li>
+                    <p>Barak-8 is a joint project between DRDO and Israel Aerospace Industries for medium- to long-range
+                        air defense.</p>
+                </li>
+                <li>
+                    <p>It has a range of 70–100 km and features a 360° AESA radar-based active seeker.</p>
+                </li>
+                <li>
+                    <p>The land-based MRSAM was inducted into the Navy in 2016 and the Army in 2025.</p>
+                </li>
+                <li>
+                    <p>It can intercept aircraft, helicopters, UAVs, and anti-ship missiles effectively.</p>
+                </li>
+                <li>
+                    <p>Barak-8 showed successful multi-target engagement during Operation Sindoor.</p>
+                </li>
+            </ul>
+
+            <img src="asset/barak.png" alt="">
+        </section>
+
+        <section class="spyder">
+            <h2>SPYDER</h2>
+            <ul>
+                <li>
+                    <p>SPYDER is a mobile short- to medium-range air defense system developed by Rafael and IAI.</p>
+                </li>
+                <li>
+                    <p>It uses Python-5 (infrared) and Derby (radar-guided) missiles for interception.</p>
+                </li>
+                <li>
+                    <p>The system covers a range of 15–35 km and can activate in under five seconds.</p>
+                </li>
+                <li>
+                    <p>Truck-mounted, SPYDER offers rapid point-defense for high-value assets.</p>
+                </li>
+                <li>
+                    <p>India procured it in 2009, and it successfully downed a Pakistani drone in 2019.</p>
+                </li>
+            </ul>
+
+            <img src="asset/spyder.png" alt="">
+        </section>
+
+        <section class="triumf">
+            <h2>S - 400 Triumf</h2>
+            <ul>
+                <li>
+                    <p>The S-400 Triumf is a long-range SAM system from Russia, known as 'Sudarshan Chakra' in India.
+                    </p>
+                </li>
+                <li>
+                    <p>It can engage aerial targets up to 400 km away and at 30 km altitude.</p>
+                </li>
+                <li>
+                    <p>The system uses various missile types to create a layered defense.</p>
+                </li>
+                <li>
+                    <p>Each regiment includes two missile battalions and a total of 128 missiles.</p>
+                </li>
+                <li>
+                    <p>India signed a $5.43 billion deal in 2018 and received 3 of 5 regiments by 2025.</p>
+                </li>
+            </ul>
+
+            <img src="asset/triumf.png" alt="">
+        </section>
+
+        <section class="dome">
+            <h2>Iron Dome</h2>
+            <ul>
+                <li>
+                    <p>Iron Dome is an Israeli short-range air defense system designed to intercept rockets and
+                        artillery.</p>
+                </li>
+                <li>
+                    <p>It uses Tamir interceptor missiles to neutralize threats within a 4–70 km range.</p>
+                </li>
+                <li>
+                    <p>The system is optimized to defend densely populated areas against rocket barrages.</p>
+                </li>
+                <li>
+                    <p>India considered co-developing Iron Dome but chose to pursue local alternatives like Project Kusha.</p>
+                </li>
+            </ul>
+
+            <img src="asset/iron-dome.png" alt="">
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>© 2025 <strong>Indian Air Defense System</strong>. All rights reserved.</p>
+            <p>Designed by <strong>Om Gupta</strong></p>
+        </div>
+    </footer>
+</body>
+
+</html>

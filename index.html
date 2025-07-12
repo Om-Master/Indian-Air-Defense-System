@@ -383,6 +383,7 @@
             height: 5px;
             background-color: #D9D9D9;
             position: absolute;
+            left: calc(50% - 400px);
         }
 
         .adjoining {
@@ -451,6 +452,7 @@
         .timeline-list li h1{
             top: 300px;
             font-size: 35px;
+            color: #4fb751;
         }
         .timeline-list li:nth-child(n + 4) h1 {
             top: 150px;
@@ -464,31 +466,63 @@
             top: 645px;
         }
         .adjoining {
-            left: calc(50% + 450px);
+            left: calc(50% + 500px);
             top: 400px;
         }
         .timeline-list li:nth-child(n + 4){
             top: calc(400px - 2.5px);
         }
         .timeline-list li:nth-child(1) {
-            left: calc(50% + 300px - 900px);
+            left: calc(50% + 350px - 900px);
         }
         .timeline-list li:nth-child(2) {
-            left: calc(50% + 300px - 525px);
+            left: calc(50% + 350px - 525px);
         }
         .timeline-list li:nth-child(3) {
-            left: calc(50% + 300px - 150px);
+            left: calc(50% + 350px - 150px);
         }
         .timeline-list li:nth-child(4) {
-            left: calc(50% + 300px - 150px);
+            left: calc(50% + 350px - 150px);
         }
         .timeline-list li:nth-child(5) {
-            left: calc(50% + 300px - 525px);
+            left: calc(50% + 350px - 525px);
         }
         .timeline-list li:nth-child(6) {
-            left: calc(50% + 300px - 900px);
+            left: calc(50% + 350px - 900px);
         }
 
+        .arrows div {
+            width: 30px;
+            height: 30px;
+            border: 7px solid #D9D9D9;
+            border-top: 0px;
+            border-left: 0px;
+            transform: rotate(-45deg);
+            position: absolute;
+        }
+        .arrows div:nth-child(1) {
+            left: calc(50% - 240px);
+            top: 387px;
+        }
+        .arrows div:nth-child(2) {
+            left: calc(50% + 140px);
+            top: 387px;
+        }
+        .arrows div:nth-child(3) {
+            left: calc(50% + 487px);
+            top: 500px;
+            transform: rotate(45deg);
+        }
+        .arrows div:nth-child(4) {
+            left: calc(50% + 160px);
+            top: 632px;
+            transform: rotate(135deg);
+        }
+        .arrows div:nth-child(5) {
+            left: calc(50% - 230px);
+            top: 632px;
+            transform: rotate(135deg);
+        }
 
         .site-footer {
             background-color: #1A2E45;
@@ -529,11 +563,11 @@
         </p>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">System</a></li>
-                <li><a href="#">Radar</a></li>
-                <li><a href="#">Strategy</a></li>
-                <li><a href="#">Future</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./System.html">System</a></li>
+                <li><a href="./Radar.html">Radar</a></li>
+                <li><a href="./Strategy.html">Strategy</a></li>
+                <li><a href="./Future.html">Future</a></li>
             </ul>
         </nav>
     </header>
@@ -654,6 +688,13 @@
         <div class="mainline"></div>
         <div class="mainline2"></div>
         <div class="adjoining"></div>
+        <div class="arrows">
+            <div class="arr1"></div>
+            <div class="arr2"></div>
+            <div class="arr3"></div>
+            <div class="arr4"></div>
+            <div class="arr5"></div>
+        </div>
 
     </section>
 
