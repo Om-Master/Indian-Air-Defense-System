@@ -91,6 +91,308 @@
             }
         }
 
+        main {
+            width: 100%;
+            height: 4200px;
+            background: linear-gradient(to bottom, #1e1a985a, #006EFF5a, #1E1A985a, #006EFF5a, #1E1A985a, #006EFF5a),
+                #000000;
+            padding-top: 90px;
+            position: relative;
+            z-index: -10;
+            overflow: hidden;
+        }
+
+        h1 {
+            width: 100%;
+            color: #2628D7;
+            font-family: 'pridi';
+            font-size: 80px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-top: 10px;
+            text-shadow: 5px 5px 0px #000000;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'pridi';
+            color: #00FF7E;
+            font-weight: bold;
+            letter-spacing: 3px;
+            font-size: 64px;
+            text-shadow: 4px 4px 4px #0A4A0F;
+            text-align: center;
+            width: 100%;
+            margin-top: 70px;
+            text-shadow: 4px 4px 2px #31D53CBF;
+        }
+
+        section.defense .layers div {
+            position: absolute;
+        }
+
+        section.defense .layers div:nth-child(even) {
+            background-color: #62B799;
+            box-shadow: 0px 0px 20px #318F79;
+        }
+
+        section.defense .layers div:nth-child(odd) {
+            background-color: #2981C4;
+            box-shadow: 0px 0px 20px #3681A7;
+        }
+
+        section.defense .layer1 {
+            width: 1100px;
+            height: 550px;
+            border-bottom-left-radius: 1100px;
+            border-bottom-right-radius: 1100px;
+            left: calc(50% - 550px);
+            top: 450px;
+        }
+
+        section.defense .layer2 {
+            width: 850px;
+            height: 425px;
+            border-bottom-left-radius: 850px;
+            border-bottom-right-radius: 850px;
+            left: calc(50% - 425px);
+            top: 450px;
+        }
+
+        section.defense .layer3 {
+            width: 600px;
+            height: 300px;
+            border-bottom-left-radius: 600px;
+            border-bottom-right-radius: 600px;
+            left: calc(50% - 300px);
+            top: 450px;
+        }
+
+        section.defense .layer4 {
+            width: 350px;
+            height: 175px;
+            border-bottom-left-radius: 350px;
+            border-bottom-right-radius: 350px;
+            left: calc(50% - 175px);
+            top: 450px;
+        }
+
+        section.defense .arrows div {
+            height: 10px;
+            background: #D9D9D9;
+            position: absolute;
+        }
+
+        section.defense .arrows div::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-right: 10px solid #D9D9D9;
+            border-bottom: 10px solid #D9D9D9;
+            transform: rotate(135deg);
+            top: -20px;
+        }
+
+        section.defense .arrow1 {
+            width: 700px;
+            left: calc(50% - 550px);
+            top: 850px;
+            transform: rotate(-60deg);
+        }
+
+        section.defense .arrow2 {
+            width: 400px;
+            left: calc(50% + 50px);
+            top: 800px;
+            transform: rotate(-130deg);
+        }
+
+        section.defense .arrow3 {
+            width: 300px;
+            left: calc(50% - 200px);
+            top: 950px;
+            transform: rotate(-80deg);
+        }
+
+        section.defense .arrow4 {
+            width: 300px;
+            left: calc(50% + 50px);
+            top: 1050px;
+            transform: rotate(-110deg);
+        }
+
+        div.ranges div {
+            width: 270px;
+            position: absolute;
+            border-radius: 24px;
+            background: #1B1B1B;
+            box-shadow: 0px 0px 20px #3D3D3D;
+            font-family: akatab;
+            padding: 20px;
+            font-size: 25px;
+            color: rgb(231, 231, 231);
+        }
+
+        div.ranges .range1 {
+            left: calc(50% - 530px);
+            top: 1200px;
+            height: 280px;
+        }
+
+        div.ranges .range2 {
+            left: calc(50% - 210px);
+            top: 1150px;
+            height: 250px;
+        }
+
+        div.ranges .range3 {
+            left: calc(50% + 120px);
+            top: 1250px;
+            height: 220px;
+        }
+
+        div.ranges .range4 {
+            left: calc(50% + 330px);
+            top: 1000px;
+            height: 220px;
+        }
+
+        div.ranges span {
+            font-weight: 900;
+        }
+
+        section.threats {
+            width: 100%;
+            margin-top: 1250px;
+        }
+
+        section.threats img {
+            width: 1700px;
+            position: absolute;
+            top: 1500px;
+            left: calc(50% - 850px);
+            filter: brightness(0.5) contrast(2) hue-rotate(50deg);
+            opacity: 0.7;
+            z-index: -2;
+        }
+
+        section.threats div {
+            border-radius: 24px;
+            background: rgb(0, 255, 234, 0.1);
+            backdrop-filter: blur(10px);
+            position: absolute;
+            padding: 30px;
+            font-family: 'akatab';
+            font-size: 35px;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-weight: 500;
+            text-shadow: 0px 0px 10px rgb(212, 212, 212);
+        }
+
+        section.threats .threat1 {
+            width: 650px;
+            height: 250px;
+            left: calc(50% - 600px);
+            top: 1850px;
+        }
+
+        section.threats .threat2 {
+            width: 420px;
+            height: 420px;
+            left: calc(50% - 210px);
+            top: 2150px;
+        }
+
+        section.threats .threat3 {
+            width: 650px;
+            height: 250px;
+            left: calc(50% - 100px);
+            top: 2620px
+        }
+
+        section.sindoor {
+            margin-top: 1300px;
+        }
+
+        section.sindoor h2 span:nth-child(1) {
+            color: #0B0B0B;
+            text-shadow: 0px 0px 5px black;
+        }
+
+        section.sindoor h2 span:nth-child(2) {
+            color: red;
+            text-shadow: 0px 0px 10px rgb(67, 0, 0);
+        }
+
+        section.sindoor .lines div {
+            width: 10px;
+            height: 660px;
+            background: black;
+            position: absolute;
+            top: 3300px;
+            z-index: -1;
+        }
+
+        section.sindoor .lines .line1 {
+            left: calc(50% - 550px);
+        }
+
+        section.sindoor .lines .line2 {
+            left: calc(50% + 100px);
+        }
+
+        section.sindoor .details>div {
+            width: 450px;
+            height: 230px;
+            border-radius: 36px;
+            background: #0A0A0A;
+            padding: 30px;
+            font-family: 'akatab';
+            display: flex;
+            align-items: center;
+            color: white;
+            font-weight: 500;
+            position: absolute;
+        }
+        section.sindoor .details>div::before{
+            content: "";
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgb(176, 14, 14);
+            position: absolute;
+            left: -65px;
+            top: 100px;
+        }
+        strong{
+            color: rgb(255, 39, 39);
+        }
+        section.sindoor .details>div:nth-child(-n + 3){
+            left: calc(50% - 500px);
+            top: 3200px;
+        }
+        section.sindoor .details>div:nth-child(n + 4){
+            left: calc(50% + 150px);
+            top: 3200px;
+        }
+        section.sindoor .details>div:nth-child(2){
+            top: 3520px;
+        }
+        section.sindoor .details>div:nth-child(3){
+            top: 3840px;
+        }
+        section.sindoor .details>div:nth-child(5){
+            top: 3520px;
+        }
+        section.sindoor .details>div:nth-child(6){
+            top: 3840px;
+        }
+
+
         .site-footer {
             background-color: #1A2E45;
             color: #EAE5DE;
@@ -115,7 +417,6 @@
         .footer-content strong {
             color: #309C6F;
         }
-
     </style>
 </head>
 
@@ -136,6 +437,139 @@
         </nav>
     </header>
     <main>
+
+        <h1>STRATEGY & THREATS</h1>
+
+        <section class="defense">
+            <h2>Layered Defense Architecture</h2>
+
+            <div class="layers">
+                <div class="layer1"></div>
+                <div class="layer2"></div>
+                <div class="layer3"></div>
+                <div class="layer4"></div>
+            </div>
+
+            <div class="arrows">
+                <div class="arrow1"></div>
+                <div class="arrow2"></div>
+                <div class="arrow3"></div>
+                <div class="arrow4"></div>
+            </div>
+
+            <div class="ranges">
+                <div class="range1">
+                    <p><span>Very Short Range:</span> MANPADS and Counter-UAS systems (0-6 km) defend against
+                        low-flying drones and missiles.</p>
+                </div>
+                <div class="range2">
+                    <p><span>Short Range:</span> SPYDER and QRSAM (15-30 km) protect forward bases and mobile
+                        formations.</p>
+                </div>
+                <div class="range3">
+                    <p><span>Medium Range:</span> Akash and Barak-8 (30-100 km) shield airbases and strategic assets.
+                    </p>
+                </div>
+                <div class="range4">
+                    <p><span>Long Range:</span> S-400 and future Project Kusha (150-400+ km) provide outer-layer
+                        deterrence.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="threats">
+            <h2>Emerging Aerial Threats</h2>
+            <div class="threat1">
+                <p><span>Drone swarms:</span> Countered by electronic warfare and laser systems (D4, Bhargavastra).</p>
+            </div>
+            <div class="threat2">
+                <p><span>Hypersonic missiles:</span> Detection and interception via advanced radars and future
+                    interceptors.</p>
+            </div>
+            <div class="threat3">
+                <p><span>Stealth aircraft:</span> Multi-sensor fusion and AESA radars track low-RCS targets.</p>
+            </div>
+            <img src="asset/drone-swarm.png" alt="">
+        </section>
+
+        <section class="sindoor">
+            <h2><span>Operation </span><span>Sindoor</span></h2>
+            <div class="details">
+                <div class="detail1">
+                    <div>
+                        <strong>Operation Sindoor</strong>, conducted on <strong>2nd-3rd May 2025</strong>, was one of
+                        India's most significant air defense actions. It was triggered by rising border tensions
+                        following
+                        ceasefire violations and reported militant infiltration in the <strong>Poonch sector</strong>.
+                        In
+                        response, Pakistan launched a <strong>coordinated aerial assault</strong> aiming to overwhelm
+                        India's defenses and target airbases, radar sites, and ammunition depots in northern and western
+                        sectors.
+                    </div>
+                </div>
+
+                <div class="detail2">
+                    <div>
+                        The attack involved a <strong>saturation strike</strong> of over <strong>520 aerial
+                            threats</strong>, including <strong>300+ drones</strong>, <strong>150+ cruise
+                            missiles</strong>,
+                        and around <strong>70 decoy or EW UAVs</strong>. These threats were launched from <strong>PoK
+                            and
+                            Sindh</strong>, timed to arrive in waves. The strategy aimed to test India's air defense
+                        network
+                        and exploit any weaknesses or delay in its response.
+                    </div>
+                </div>
+
+                <div class="detail3">
+                    <div>
+                        India's reaction was swift, coordinated through the <strong>Integrated Air Command and Control System (IACCS)</strong>. Within moments, threat alerts were issued. Data from ground radars,
+                        <strong>AWACS</strong>, and satellites like <strong>Cartosat</strong> and <strong>RISAT</strong>
+                        were fused in real time. IACCS prioritized threats, selected interceptors, and guided responses
+                        across the layered defense grid.
+                    </div>
+                </div>
+
+                <div class="detail4">
+                    <div>
+                        The defense systems activated in layers: <strong>SPYDER</strong> neutralized drones near forward
+                        areas, while <strong>QRSAM</strong> protected mobile units near Ganganagar. At medium range,
+                        <strong>Akash</strong> and <strong>Barak-8</strong> intercepted incoming missiles targeting key
+                        assets. <strong>S-400 systems</strong>, deployed in depth, handled long-range, high-speed
+                        threats
+                        with great efficiency.
+                    </div>
+                </div>
+
+                <div class="detail5">
+                    <div>
+                        In total, <strong>over 480 of 520 threats</strong> were intercepted. SPYDER downed 140 drones,
+                        Akash
+                        stopped 110 missiles, Barak-8 engaged 85 targets, and S-400 took out over 100 threats—all with
+                        success rates above 90%. <strong>No major damage or casualties</strong> were reported. Although
+                        IAF
+                        jets were scrambled, ground systems handled the defense independently.
+                    </div>
+                </div>
+
+                <div class="detail6">
+                    <div>
+                        <strong>Operation Sindoor</strong> became a milestone in India's defense preparedness. It
+                        showcased
+                        the power of <strong>layered air defense</strong> and real-time threat management. Following the
+                        operation, India fast-tracked deployment of <strong>Directed Energy Weapons (DEWs)</strong> and
+                        improved coordination among the <strong>IAF, Army, and DRDO</strong>, reshaping its air defense
+                        doctrine.
+                    </div>
+                </div>
+
+            </div>
+            <div class="lines">
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </div>
+        </section>
 
     </main>
     <footer class="site-footer">
