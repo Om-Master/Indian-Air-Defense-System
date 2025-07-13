@@ -37,7 +37,6 @@
             box-shadow: 0px 6px 10px #13630B;
             padding: 0 5%;
             position: fixed;
-            z-index: 5;
             animation: slidenav 0.4s ease-in-out;
         }
 
@@ -94,7 +93,7 @@
         main {
             width: 100%;
             height: 4600px;
-            background: radial-gradient(circle at 50% 50%, rgba(57, 125, 215, 0.5), rgba(38, 34, 178, 0.5), rgba(57, 125, 215, 0.5), rgba(38, 34, 178, 0.5), rgba(57, 125, 215, 0.5), rgba(38, 34, 178, 0.5)),
+            background: radial-gradient(circle at 50% 50%, rgba(11, 117, 255, 0.7), rgba(25, 12, 146, 0.7), rgba(11, 117, 255, 0.7), rgba(25, 12, 146, 0.7), rgba(11, 117, 255, 0.7), rgba(25, 12, 146, 0.7)),
                 radial-gradient(circle at 50% 50%, #9090907F, #4040407F, #9090907F, #4040407F, #9090907F, #4040407F);
             padding-top: 90px;
             position: relative;
@@ -114,7 +113,6 @@
             animation: slidein 1s ease-in-out;
             text-align: center;
         }  
-
 
         section div:nth-child(1) {
             width: 225px;
@@ -151,16 +149,17 @@
             justify-content: center;
             align-items: center;
             position: absolute;
+            z-index: auto;
         }
-        section ul li div {
+        section ul div {
             content: "";
             position: absolute;
             width: 350px;
             height: 10px;
             background-color: #D9D9D9;
+            z-index: -1;
             left: 87px;
             transform-origin: 0% 0%;
-            z-index: -1;
         }
         section:nth-child(odd) ul li{
             background: #26b175;
@@ -179,7 +178,7 @@
             opacity: 0.5;
             z-index: -3;
         }
-        section ul li, section img{
+        section ul li, section ul div, section img{
             filter: drop-shadow(20px 20px 10px #505050);
         }
 
@@ -191,33 +190,46 @@
             left: calc(50% - 380px);
             top: 300px;
         }
-        section.rohini ul li:nth-child(1) div {
+        section.rohini ul div.radarline:nth-child(2) {
             transform: rotate(72deg);
+            left: calc(50% - 290px);
+            top: 380px;
         }
-        section.rohini ul li:nth-child(2) {
+        section.rohini ul li:nth-child(3) {
             left: calc(50% + 10px);
             top: 437px;
         }
-        section.rohini ul li:nth-child(2) div {
+        section.rohini ul div.radarline:nth-child(4) {
             transform: rotate(144deg);
+            left: calc(50% + 100px);
+            top: 517px;
         }
-        section.rohini ul li:nth-child(3) {
+        section.rohini ul li:nth-child(5) {
             left: calc(50%);
             top: 850px;
         }
-        section.rohini ul li:nth-child(3) div {
+        section.rohini ul div.radarline:nth-child(6) {
             transform: rotate(216deg);
+            left: calc(50% + 90px);
+            top: 930px;
         }
-        section.rohini ul li:nth-child(4) {
+        section.rohini ul li:nth-child(7) {
             left: calc(50% - 390px);
             top: 970px;
         }
-        section.rohini ul li:nth-child(4) div {
+        section.rohini ul div.radarline:nth-child(8) {
             transform: rotate(288deg);
+            left: calc(50% - 300px);
+            top: 1050px;
         }
-        section.rohini ul li:nth-child(5) {
+        section.rohini ul li:nth-child(9) {
             left: calc(50% - 620px);
             top: 630px;
+        }
+        section.rohini ul div.radarline:nth-child(10) {
+            transform: rotate(360deg);
+            left: calc(50% - 530px);
+            top: 710px;
         }
         section.rohini img{
             left: calc(50% - 700px);
@@ -234,29 +246,37 @@
             left: calc(50% + 10px);
             top: 1200px;
         }
-        section.rajendra ul li:nth-child(1) div {
+        section.rajendra ul div.radarline:nth-child(2) {
             transform: rotate(70deg);
+            left: calc(50% + 100px);
+            top: 1280px;
         }
-        section.rajendra ul li:nth-child(2) {
+        section.rajendra ul li:nth-child(3) {
             left: calc(50% + 460px);
             top: 1420px;
         }
-        section.rajendra ul li:nth-child(2) div {
+        section.rajendra ul div.radarline:nth-child(4) {
             transform: rotate(160deg);
+            left: calc(50% + 550px);
+            top: 1500px;
         }
-        section.rajendra ul li:nth-child(3) {
+        section.rajendra ul li:nth-child(5) {
             left: calc(50% + 245px);
             top: 1870px;
         }
-        section.rajendra ul li:nth-child(3) div {
+        section.rajendra ul div.radarline:nth-child(6) {
             transform: rotate(250deg);
+            left: calc(50% + 335px);
+            top: 1950px;
         }
-        section.rajendra ul li:nth-child(4) {
+        section.rajendra ul li:nth-child(7) {
             left: calc(50% - 210px);
             top: 1650px;
         }
-        section.rajendra ul li:nth-child(4) div {
+        section.rajendra ul div.radarline:nth-child(8) {
             transform: rotate(-20deg);
+            left: calc(50% - 120px);
+            top: 1730px;
         }
         section.rajendra img{
             left: calc(50% - 200px);
@@ -273,29 +293,37 @@
             left: calc(50% - 360px);
             top: 1940px;
         }
-        section.swordfish ul li:nth-child(1) div {
+        section.swordfish ul div.radarline:nth-child(2) {
             transform: rotate(75deg);
+            left: calc(50% - 270px);
+            top: 2020px;
         }
-        section.swordfish ul li:nth-child(2) {
+        section.swordfish ul li:nth-child(3) {
             left: calc(50% + 60px);
             top: 2200px;
         }
-        section.swordfish ul li:nth-child(2) div {
+        section.swordfish ul div.radarline:nth-child(4) {
             transform: rotate(165deg);
+            left: calc(50% + 150px);
+            top: 2280px;
         }
-        section.swordfish ul li:nth-child(3) {
+        section.swordfish ul li:nth-child(5) {
             left: calc(50% - 190px);
             top: 2630px;
         }
-        section.swordfish ul li:nth-child(3) div {
+        section.swordfish ul div.radarline:nth-child(6) {
             transform: rotate(255deg);
+            left: calc(50% - 100px);
+            top: 2710px;
         }
-        section.swordfish ul li:nth-child(4) {
+        section.swordfish ul li:nth-child(7) {
             left: calc(50% - 610px);
             top: 2370px;
         }
-        section.swordfish ul li:nth-child(4) div {
+        section.swordfish ul div.radarline:nth-child(8) {
             transform: rotate(-15deg);
+            left: calc(50% - 520px);
+            top: 2450px;
         }
         section.swordfish img{
             left: calc(50% - 500px);
@@ -311,22 +339,28 @@
             left: calc(50% + 350px);
             top: 2870px;
         }
-        section.arudhra ul li:nth-child(1) div {
+        section.arudhra ul div.radarline:nth-child(2) {
             transform: rotate(130deg);
+            left: calc(50% + 440px);
+            top: 2950px;
         }
-        section.arudhra ul li:nth-child(2) {
+        section.arudhra ul li:nth-child(3) {
             left: calc(50% + 240px);
             top: 3460px;
         }
-        section.arudhra ul li:nth-child(2) div {
+        section.arudhra ul div.radarline:nth-child(4) {
             transform: rotate(250deg);
+            left: calc(50% + 330px);
+            top: 3540px;
         }
-        section.arudhra ul li:nth-child(3) {
+        section.arudhra ul li:nth-child(5) {
             left: calc(50% - 220px);
             top: 3070px;
         }
-        section.arudhra ul li:nth-child(3) div {
+        section.arudhra ul div.radarline:nth-child(6) {
             transform: rotate(10deg);
+            left: calc(50% - 130px);
+            top: 3150px;
         }
         section.arudhra img{
             left: calc(50% - 270px);
@@ -342,29 +376,37 @@
             left: calc(50% - 360px);
             top: 3600px;
         }
-        section.awacs ul li:nth-child(1) div {
+        section.awacs ul div.radarline:nth-child(2) {
             transform: rotate(75deg);
+            left: calc(50% - 270px);
+            top: 3680px;
         }
-        section.awacs ul li:nth-child(2) {
+        section.awacs ul li:nth-child(3) {
             left: calc(50% + 60px);
             top: 3850px;
         }
-        section.awacs ul li:nth-child(2) div {
+        section.awacs ul div.radarline:nth-child(4) {
             transform: rotate(165deg);
+            left: calc(50% + 150px);
+            top: 3930px;
         }
-        section.awacs ul li:nth-child(3) {
+        section.awacs ul li:nth-child(5) {
             left: calc(50% - 190px);
             top: 4270px;
         }
-        section.awacs ul li:nth-child(3) div {
+        section.awacs ul div.radarline:nth-child(6) {
             transform: rotate(255deg);
+            left: calc(50% - 100px);
+            top: 4350px;
         }
-        section.awacs ul li:nth-child(4) {
+        section.awacs ul li:nth-child(7) {
             left: calc(50% - 610px);
             top: 4020px;
         }
-        section.awacs ul li:nth-child(4) div {
+        section.awacs ul div.radarline:nth-child(8) {
             transform: rotate(-15deg);
+            left: calc(50% - 520px);
+            top: 4100px;
         }
         section.awacs img{
             left: calc(50% - 700px);
@@ -409,8 +451,8 @@
             <img src="asset/fighter-plane.png" alt="">
             VAYU
         </p>
-        <div class="radarline"></div>
         <nav>
+            <div class="radarline"></div>
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./System.html">System</a></li>
@@ -431,24 +473,24 @@
             <ul>
                 <li>
                     <p>Developed by DRDO, produced by BEL; operates in S-band.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
                 <li>
-                    <p>Detects targets beyond 200 km and tracks 150–200 simultaneously.</p>
-                    <div class="radarline"></div>
+                    <p>Detects targets beyond 200 km and tracks 150-200 simultaneously.</p>
                 </li>
+                <div class="radarline"></div>
                 <li>
                     <p>Determines target altitude via passive phased-array beams.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
                 <li>
                     <p>Mounted on mobile platforms for flexibility.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
                 <li>
                     <p>Provides early warning for Akash missile batteries.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
             </ul>
             <img src="asset/rohini.png" alt="">
         </section>
@@ -460,20 +502,20 @@
             <ul>
                 <li>
                     <p>C-band phased-array radar linked to Akash launchers.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
                 <li>
                     <p>Tracks up to 64 targets within a 150 km range.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
                 <li>
                     <p>Guides missiles using a secure command link.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
                 <li>
                     <p>Equipped with ECCM to resist jamming.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
             </ul>
             <img src="asset/Rajendra.png" alt="">
         </section>
@@ -485,20 +527,20 @@
             <ul>
                 <li>
                     <p>L-band AESA radar for ballistic missile defense.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
                 <li>
                     <p>Based on Israel's Green Pine technology.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
                 <li>
                     <p>Tracks targets up to 800 km away.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
                 <li>
                     <p>Detects small objects like reentry vehicles with precision.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
             </ul>
             <img src="asset/swordfish.png" alt="">
         </section>
@@ -509,17 +551,17 @@
             </div>
             <ul>
                 <li>
-                    <p>Green Pine imported between 2002–2005 for BMD.</p>
-                    <div class="radarline"></div>
+                    <p>Green Pine imported between 2002-2005 for BMD.</p>
                 </li>
+                <div class="radarline"></div>
                 <li>
                     <p>Arudhra is an indigenous mid-range radar developed by DRDO.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
                 <li>
                     <p>Both used for missile defense and early warning systems.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
             </ul>
             <img src="asset/arudhra.png" alt="">
         </section>
@@ -531,20 +573,20 @@
             <ul>
                 <li>
                     <p>Phalcon AWACS on IL-76: 360° airborne surveillance.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
                 <li>
                     <p>Netra AEW&C on Embraer: detects low-flying threats.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
                 <li>
                     <p>Integrated into IACCS to form a Recognized Air Situation Picture (RASP).</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
                 <li>
                     <p>Enables real-time threat tracking and automated defense responses.</p>
-                    <div class="radarline"></div>
                 </li>
+                <div class="radarline"></div>
             </ul>
             <img src="asset/awacs.png" alt="">
         </section>
@@ -553,10 +595,10 @@
     <footer class="site-footer">
         <div class="footer-content">
             <p>© 2025 <strong>Indian Air Defense System</strong>. All rights reserved.</p>
-            <div class="radarline"></div>
             <p>Designed by <strong>Om Gupta</strong></p>
             <div class="radarline"></div>
         </div>
+        <div class="radarline"></div>
     </footer>
 </body>
 
